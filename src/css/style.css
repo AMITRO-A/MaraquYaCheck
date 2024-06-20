@@ -1,0 +1,776 @@
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: rgba(199, 199, 199, 0.88);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    transition: top 0.3s;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Ограничение ширины */
+    padding: 0 20px;
+}
+
+.logo {
+    width: 100px; /* Уменьшенная ширина логотипа */
+    height: auto;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Joti One', cursive;
+}
+
+.menu-item {
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.menu-item:hover, .menu-item.active {
+    border-bottom: 3px solid black;
+}
+
+header.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Секция с информацией */
+.info-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-text {
+    flex: 1;
+    padding-right: 10px;
+    font-family: 'Irish Grover', cursive;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+}
+
+.info-image {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+}
+
+.highlight {
+    color: #FF6347;
+    font-weight: bold;
+}
+
+/* Широкие секции */
+.wide-section {
+    width: 100%;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.wide-title {
+    font-family: 'Irish Grover', cursive;
+    font-size: 36px;
+    color: #333;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.mini-blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.mini-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin: 10px;
+    width: calc((100% / 4) - 20px);
+}
+
+.mini-block:hover {
+    transform: scale(1.05);
+}
+
+.mini-block img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.mini-block h3 {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.mini-block p {
+    font-size: 16px;
+    width: 90%;
+}
+
+/* Черный баннер */
+.black-banner {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-text {
+    font-family: 'Irish Grover', cursive;
+    color: #CC61FF;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.author-text {
+    font-family: 'Irish Grover', cursive;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+/* Каталог */
+.catalog-section {
+    width: 100%;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.catalog-title {
+    font-family: 'Irish Grover', cursive;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.catalog-images {
+    display: flex;
+    justify-content: space-evenly; /* Равномерное распределение с одинаковыми промежутками */
+    margin-bottom: 20px;
+}
+
+.catalog-images img {
+    width: 300px; /* Уменьшенная ширина */
+    height: 225px; /* Уменьшенная высота */
+    object-fit: contain; /* Убедимся, что изображения полностью видны и не обрезаются */
+    margin-bottom: 10px; /* Добавляем отступ снизу для каждого изображения */
+}
+
+.divider {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.catalog-text {
+    font-family: 'Irish Grover', cursive;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Сигнатурные десерты */
+.signature-dessert-block, .reversed-signature-dessert-block {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрирование содержимого блока */
+    background-color: #FFF; /* Цвет фона */
+    padding: 20px;
+    margin: 0 auto; /* Автоматический отступ для центрирования всего блока */
+    width: 100%;
+    max-width: 1500px; /* Фиксированная ширина блока */
+}
+
+.reversed-signature-dessert-block {
+    flex-direction: row-reverse; /* Изменяем направление строк на обратное */
+}
+
+.image-container {
+    flex: 2; /* Доля занимаемого пространства изображением */
+    padding: 0 20px;
+}
+
+.dessert-image {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    flex: 2; /* Доля занимаемого пространства текстом */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.title {
+    font-size: 24px;
+    color: #FFA500; /* Желтый цвет заголовка */
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.order-button {
+    padding: 10px 20px;
+    background-color: #F2F2F2; /* Серый цвет кнопки */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #e7e7e7;
+}
+
+/* Карусель */
+.static-carousel {
+    text-align: center;
+    padding: 20px;
+}
+
+.carousel-container {
+    position: relative;
+    margin: 0 auto;
+    width: 80%; /* Оставляем ширину карусели */
+    overflow: visible; /* Обеспечиваем видимость элементов вне области карусели */
+}
+
+.carousel {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.carousel-image {
+    width: 30%; /* Ширина каждой картинки для отображения трех изображений */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0; /* Не позволяйте картинкам сжиматься */
+}
+
+.carousel-control {
+    position: absolute; /* Абсолютное позиционирование относительно карусели */
+    top: 50%; /* Центрируем по вертикали */
+    transform: translateY(-50%); /* Точное центрирование по вертикали */
+    background-color: #FFFFFF; /* Белый фон круга */
+    color: #FFEA00; /* Желтые стрелки */
+    border: none;
+    cursor: pointer; /* Курсор-указатель */
+    padding: 20px; /* Размер круга */
+    border-radius: 50%; /* Создаем форму круга */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Добавляем тень для выделения */
+    z-index: 10; /* Гарантируем видимость поверх остальных элементов */
+    font-size: 20px; /* Размер стрелок */
+    line-height: 0; /* Убираем лишние отступы внутри круга */
+}
+
+.prev {
+    left: -60px; /* Отступаем дальше от края карусели */
+}
+
+.next {
+    right: -60px; /* Отступаем дальше от края карусели */
+}
+
+.carousel-indicators {
+    margin-top: 15px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #FFEA00; /* Цвет индикатора (желтый) */
+    border-radius: 50%;
+    margin: 0 5px;
+    opacity: 0.5;
+}
+
+.indicator.active {
+    opacity: 1; /* Активный индикатор имеет полную непрозрачность */
+}
+
+/* Баннер с кнопкой */
+.favorite-dessert-banner {
+    background-image: url('/src/img/banner2.png'); /* Укажите путь к вашей фотографии */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px; /* Высота баннера */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-dessert-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favorite-dessert-text {
+    color: #fff; /* Белый цвет текста */
+    text-align: center;
+    font-family: 'Irish Grover', cursive; /* Используем шрифт Irish Grover */
+    max-width: 80%; /* Ограничиваем ширину текста для лучшей читаемости */
+}
+
+.favorite-dessert-title {
+    font-size: 60px; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ между заголовком и подзаголовком */
+}
+
+.favorite-dessert-subtitle {
+    font-size: 30px; /* Размер подзаголовков */
+    margin: 10px 0; /* Отступы между строками текста */
+}
+
+.favorite-dessert-button {
+    background-color: #FFEA00; /* Желтая кнопка */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px; /* Скругленные углы */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Тень для кнопки */
+    transition: background-color 0.3s;
+}
+
+.favorite-dessert-button:hover {
+    background-color: #FFD700; /* Темно-желтый оттенок при наведении */
+}
+
+/* Footer */
+.footer-section {
+    display: flex;
+    justify-content: space-around; /* Распределяем секции по горизонтали */
+    padding: 20px;
+    background-color: #f9f9f9; /* Светлый фон */
+    border-top: 1px solid #ccc; /* Разделитель сверху */
+}
+
+.footer-heading {
+    font-family: 'Irish Grover', cursive; /* Шрифт Irish Grover */
+    font-size: 24px;
+    color: #FFA500; /* Оранжевый цвет */
+    margin-bottom: 15px;
+}
+
+.contact-info, .social-media {
+    width: 40%; /* Ограничиваем ширину каждой секции */
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+
+.contact-details li {
+    margin-bottom: 10px;
+}
+
+.icon {
+    color: #FFEA00; /* Желтый цвет для иконок */
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 5px; /* Отступы между иконками в 5 пикселей */
+}
+
+.social-icon {
+    width: 40px; /* Настраиваемый размер иконок */
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s; /* Добавляем анимацию для эффекта увеличения */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Легкое увеличение при наведении */
+}
+
+/* Для страницы shop */
+/* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Irish Grover', cursive;
+}
+
+/* Стили баннера для страницы shop */
+.shop-banner {
+    width: 100vw;
+    height: 50%;
+    background-image: url('/src/img/frame4_back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.shop-logo-section {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.shop-logo {
+    width: 150px;
+}
+
+.shop-go-back-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #FFA500;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+}
+
+.shop-go-back-button:hover {
+    background-color: #FFB732;
+}
+
+/* Стили секции с карточками товаров для страницы shop */
+.shop-products-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 20px;
+}
+
+.shop-product-card {
+    width: 45%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.shop-product-image {
+    width: 15%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.shop-product-title {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+.shop-product-description {
+    font-size: 25px;
+    margin: 10px 0;
+    line-height: 1.5; 
+}
+
+.shop-add-to-cart-button {
+    display: inline-block;
+    padding: 30px 40px;
+    background-color: #FFA500;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 25px;
+}
+
+.shop-add-to-cart-button:hover {
+    background-color: #FFB732;
+}
+
+/* Стили для кнопки прокрутки наверх внизу страницы для страницы shop */
+#shopMyBtn {
+    margin-top: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#shopMyBtn:hover {
+    background-color: #FFB732;
+}
+
+.banner {
+    height: 482px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.unique-full-screen-background {
+    background-image: url('/src/img/background.png'); /* Укажите путь к картинке */
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.unique-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7)); 
+    z-index: 1;
+}
+
+.unique-central-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.unique-logo-circle {
+    width: 150px; 
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px; 
+}
+
+.unique-logo {
+    width: 80%;
+}
+
+.unique-main-title {
+    font-size: 60px; 
+    margin-bottom: 30px; 
+    font-family: 'Irish Grover', cursive;
+}
+
+.unique-order-button {
+    display: inline-block;
+    padding: 20px 100px; 
+    background-color: #FFA500;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px; 
+    font-family: 'Irish Grover', cursive;
+}
+
+.unique-privacy-policy-button {
+    display: inline-block;
+    font-family: 'Irish Grover', cursive;
+    padding: 12px 24px; 
+    background-color: #8A2BE2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px; /* Увеличиваем размер текста */
+}
+
+/* Стили для кнопки прокрутки наверх внизу страницы */
+#shop-myBtn {
+    margin-top: 40px; /* Добавьте отступ сверху для размещения кнопки внизу страницы */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Делаем кнопку круглой */
+    background-color: #FFA500; /* Устанавливаем желтый цвет */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    cursor: pointer; /* Добавляем указатель мыши при наведении */
+    font-size: 18px; /* Размер значка стрелки */
+    display: block;
+    margin-left: auto; /* Центрируем кнопку по горизонтали */
+    margin-right: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Добавляем тень */
+}
+
+#shop-myBtn:hover {
+    background-color: #FFB732; /* Более светлый оттенок при наведении */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media (max-width: 768px) {
+    .banner {
+        height: 300px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 65px;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-section, .wide-section {
+        flex-direction: column;
+        width: 100%; /* Фиксированная ширина изменена на 100% */
+    }
+
+    .info-text, .info-image {
+        padding: 10px 0;
+        flex: 100%;
+    }
+
+    .mini-blocks {
+        flex-direction: column; /* Строим блоки в столбец */
+    }
+
+    .mini-block {
+        width: 100%; /* Каждый блок занимает 100% ширины */
+        margin: 10px 0; /* Добавляем отступы между блоками */
+    }
+
+    .black-banner {
+        height: 200px;
+    }
+
+    .main-text, .author-text {
+        text-align: center; /* Центрируем текст */
+        font-size: 24px; /* Уменьшаем размер шрифта */
+    }
+
+    .carousel-container {
+        width: 100%; /* Обеспечиваем полную ширину карусели на мобильных устройствах */
+    }
+
+    .carousel-image {
+        width: 100%; /* Каждое изображение занимает 100% ширины контейнера */
+    }
+
+    .signature-dessert-block, .reversed-signature-dessert-block {
+        flex-direction: column; /* Строим блоки в столбец */
+        width: 100%;
+    }
+
+    .text-container {
+        text-align: center;
+    }
+
+    .favorite-dessert-title {
+        font-size: 36px; /* Уменьшаем размер заголовка */
+    }
+
+    .favorite-dessert-subtitle {
+        font-size: 20px; /* Уменьшаем размер подзаголовков */
+    }
+}
